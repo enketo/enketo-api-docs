@@ -3,7 +3,7 @@ category: survey
 path: '/survey'
 title: 'Get a survey (existing)'
 type: 'GET'
-
+params: 'server_url form_id'
 layout: nil
 ---
 
@@ -12,10 +12,10 @@ This method is meant to test the API in the browser. It is probably not of any p
 ### Request
 
 * required parameter **`server_url`** is the url of the OpenRosa server your form is hosted on.
-* required parameter **`form_id`** is the ID of the form listed in \[SERVER]\/formList.
+* required parameter **`form_id`** is the ID of the form listed in _SERVER_/formList.
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic [API_TOKEN]:```
+```Authentication: basic _API_TOKEN_:```
 
 ### Response
 
@@ -24,11 +24,6 @@ Sends back on object including the url property which contains the enketo webfor
 ```Status: 200 OK```
 ```{
     url:  'https://abcde.enketo.org/webform',
-    name: 'My first thing'
+    name: 'My first thing',
+    code: '200'
 }```
-
-For errors responses, see the [response status codes documentation](#response-status-codes).
-
-### Try
-
-```{{post.path}}?server_url=[SERVER]&form_id=[ID]```

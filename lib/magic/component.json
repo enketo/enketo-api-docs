@@ -1,0 +1,8 @@
+{
+    "name": "magic",
+    "description": "Updates all references to Auth Token, Server URL, form ID and updates code samples",
+    "dependencies": {
+        "component/jquery": "*"
+    },
+    "scripts": ["index.js"]
+}

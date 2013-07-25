@@ -8,10 +8,17 @@ layout: default
 
 <section id='content'>
 {% for post in site.posts %}
-  <article class='{{ post.type }}'>
+  <article class='{{ post.type }}' data-path='{{ post.path }}'>
     <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.path }}</code> {% endif %}{{ post.title }}</h2></a>
     <section class='body'>
       {{ post.content }}
+      {% if post.type %}<p>For error responses, see the <a href="#/response-status-codes">response status codes documentation</a>.</p>{% endif %}
+      {% if post.type == 'GET' %}
+      	<h3>Try in browser</h3>
+      	<p><a class="try" data-params="{{ post.params }}" href="#"></a></p>
+      {% endif %}
+      	<h3>Try in terminal</h3>
+      	<p><code class="try" data-params="{{ post.params }}"></code></p>
     </section>
   </article>
 {% endfor %}
