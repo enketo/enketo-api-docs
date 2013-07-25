@@ -15,10 +15,10 @@ layout: default
       {% if post.type %}<p>For error responses, see the <a href="#/response-status-codes">response status codes documentation</a>.</p>{% endif %}
       {% if post.type == 'GET' %}
       	<h3>Try in browser</h3>
-      	<a data-params="{{ post.params }}" href="#"></a>
+      	<p><a class="try" data-params="{{ post.params }}" href="#"></a></p>
       {% endif %}
       	<h3>Try in terminal</h3>
-      	<code data-params="{{ post.params }}"></code>
+      	<p><code class="try" data-params="{{ post.params }}"></code></p>
     </section>
   </article>
 {% endfor %}

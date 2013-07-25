@@ -3,7 +3,7 @@ category: survey
 path: '/survey'
 title: 'Get a survey (new or existing)'
 type: 'POST'
-params: 'SERVER ID'
+params: 'server_url form_id'
 
 layout: nil
 ---

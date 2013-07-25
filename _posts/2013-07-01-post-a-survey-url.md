@@ -3,7 +3,7 @@ category: survey
 path: '/survey'
 title: 'Get a survey (existing)'
 type: 'GET'
-params: 'SERVER ID'
+params: 'server_url form_id'
 layout: nil
 ---
 
@@ -12,10 +12,10 @@ This method is meant to test the API in the browser. It is probably not of any p
 ### Request
 
 * required parameter **`server_url`** is the url of the OpenRosa server your form is hosted on.
-* required parameter **`form_id`** is the ID of the form listed in \[SERVER\]\/formList.
+* required parameter **`form_id`** is the ID of the form listed in _SERVER_/formList.
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic [API_TOKEN]:```
+```Authentication: basic _API_TOKEN_:```
 
 ### Response
 
