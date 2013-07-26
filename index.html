@@ -11,8 +11,24 @@ layout: default
   <article class='{{ post.type }}' data-path='{{ post.path }}'>
     <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.path }}</code> {% endif %}{{ post.title }}</h2></a>
     <section class='body'>
+      {% if post.type == 'GET' and post.category == 'survey' %}<p>This method is meant to test the API in the browser. It is probably not of any practical use as the POST version is the one to use to integrate enketo.</p>{% endif %}
       {{ post.content }}
       {% if post.type %}<p>For error responses, see the <a href="#/response-status-codes">response status codes documentation</a>.</p>{% endif %}
+      <p>
+      {% for code in post.codes %}
+      <span class="status-code {% if code == 200 or code == 201 or code == 202 %}ok{% else %}error{% endif %}" 
+       data-title="{% case code %}
+          {% when 200 %}Record existed, request succeeded
+          {% when 201 %}Record was created, request succeeded
+          {% when 204 %}Request succeeded, empty response
+          {% when 400 %}Malformed request, maybe parameters are missing
+          {% when 401 %}Authentication failed, incorrect or expired API token used or none at all
+          {% when 403 %}Authentication succeeded, but account is not active or quota is filled up
+          {% when 404 %}Resource was not found in database
+          {% when 405 %}Request not allowed. You may not have API access on your plan
+          {% when 410 %}This API call is deprecated in this API
+          {% endcase %}">{{ code }}</span>{% endfor %}
+      </p>
       {% if post.type == 'GET' %}
       	<h3>Try in browser</h3>
       	<p><a class="try" data-params="{{ post.params }}" href="#"></a></p>

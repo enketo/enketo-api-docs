@@ -665,3 +665,35 @@ code {
   overflow-x: scroll;
   white-space: pre;
 }
+
+.status-code {
+  padding: 5px 10px;
+  line-height: 40px;
+  border-radius: 10px;
+  background-color: #e2e7ea;
+  font-weight: bold;
+  border: 1px solid #aaa;
+}
+.status-code.error {
+  color: red;
+}
+.status-code.ok {
+  color: green;
+}
+.status-code:hover {
+  background-color: #eee;
+  position: relative;
+}
+.status-code[data-title]:hover:after {
+  content: attr(data-title);
+  padding: 0 8px;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  white-space: nowrap;
+  z-index: 20;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px #222;
+  background-color: #F8EF1E;
+}
