@@ -23,27 +23,27 @@ Sends back an object with launched forms.
 ```{
     'forms': [
         {
-        "form_id" : "Birds",
-        "name": "Crowd/Birds",
-        "description": "",
-        "url": "https://birds.enketo.org/webform",
-        "server": "https://formhub.org/formhub_u",
-        "delete_allowed" : false
+            "form_id" : "Birds",
+            "name": "Crowd/Birds",
+            "description": "",
+            "url": "https://birds.enketo.org/webform",
+            "server": "https://formhub.org/formhub_u",
+            "delete_allowed" : false
         },
         {
-        "form_id" : "Cascading Example"
-        "name": "Cascading_Example",
-        "description": "",
-        "url": "https://cra4e.enketo.org/webform",
-        "server": "https://formhub.org/formhub_u"
-        "delete_allowed" : true,
+            "form_id" : "Cascading Example"
+            "name": "Cascading_Example",
+            "description": "",
+            "url": "https://cra4e.enketo.org/webform",
+            "server": "https://formhub.org/formhub_u"
+            "delete_allowed" : true,
         },
-        "form_id" : consent_signature",
-        "name": "consent_signature",
-        "title": "Sample consent form with signature widget.",
-        "url": "https://0qpeo.enketo.org/webform",
-        "server": "https://formhub.org/formhub_u",
-        "delete_allowed" : false
+            "form_id" : consent_signature",
+            "name": "consent_signature",
+            "title": "Sample consent form with signature widget.",
+            "url": "https://0qpeo.enketo.org/webform",
+            "server": "https://formhub.org/formhub_u",
+            "delete_allowed" : false
         }
     ],
     'code':    '200'
