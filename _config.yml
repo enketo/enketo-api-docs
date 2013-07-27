@@ -3,5 +3,5 @@ exclude: ['README.markdown']
 permalink: ':title'
 pygments: true
 safe: false
-title: 'Carte'
+title: 'API Documentation'
 api_url: 'https://enketo-dev.formhub.org/api_v1'

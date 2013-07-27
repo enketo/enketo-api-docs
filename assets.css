@@ -459,12 +459,17 @@ code {
   top: 0;
   width: 240px;
 }
+#sidebar img{
+  display: block;
+  margin: 10px auto -10px auto;
+}
 
 #sidebar h1 {
   background: #111;
   font-size: 14px;
   margin: 0;
   padding: 20px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -535,7 +540,11 @@ code {
   -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-
+#sidebar #links input{
+  background-color: #555;
+  color: bbb;
+  margin-left: -10px;
+}
 /* References */
 #content {
   padding: 20px;
