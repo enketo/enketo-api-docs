@@ -19,7 +19,6 @@ layout: nil
 
 ### Response
 
-Sends back an object including a url property.
 
 ```Status: 204 OK (found in db, checked that it is no longer listed in /formList, and de-activated)```
 ```{
