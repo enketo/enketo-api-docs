@@ -9866,7 +9866,7 @@ function Magic() {
 		$refs = {},
 		$inputs = $('input[name="apiToken"], input[name="serverUrl"], input[name="formId"]'),
 		$linkTries = $('a.try'),
-		$curlTries = $('code.try');
+		$curlTries = $('textarea.try');
 
 	$('em:contains("SERVER")').replaceWith('<span class="server_url"></span>');
 	$('em:constains("ID")').replaceWith('<span class="form_id"></span>');
@@ -9877,15 +9877,16 @@ function Magic() {
 
 	$inputs.change(function() {
 		console.log('input changed');
-		var txt, link, paramNames, curl, dataStr,
+		var txt, link, paramNames, curl, dataStr, $article, path,
 			name = $(this).attr('name'),
 			value = $(this).val(),
 			paramVals =
 			{
-				'server_url' : $('input[name="serverUrl"]').val(),
-				'form_id' : $('input[name="formId"]').val(),
-				'instance' : '<data></data>',
-				'return_url' : 'https://enketo.org'
+				'server_url' 	: $('input[name="serverUrl"]').val(),
+				'form_id' 		: $('input[name="formId"]').val(),
+				'instance' 		: '<data></data>',
+				'return_url' 	: 'https://enketo.org',
+				'instance_id' 	: 'someUUID'
 			},
 			apiToken = $('input[name="apiToken"]').val();
 
@@ -9905,18 +9906,24 @@ function Magic() {
 			}
 			link = $(this).closest('article').attr('data-path') + dataStr;
 			$(this).attr('href', baseUrl + link);
-			$(this).text(link);
+			$(this).text(baseUrl + link);
 		});
 
 		//update references in cURL snippets
 		$curlTries.each(function(){
 			dataStr = '';
+			$article = $(this).closest('article');
+			path = $article.attr('data-path');
 			paramNames = $(this).attr('data-params').split(' ');
 			for (var i=0 ; i<paramNames.length ; i++){
 				dataStr += (i === 0) ? '' : '&';
 				dataStr += paramNames[i]+'='+paramVals[paramNames[i]];
 			}
-			curl = 'curl --user '+apiToken+': "'+dataStr+'" '+baseUrl+$(this).closest('article').attr('data-path')+' -3';
+			curl = ($article.hasClass('POST')) 
+				? 'curl --user '+apiToken+': -d "'+dataStr+'" '+baseUrl+path+' -3 -k' 
+				: ($article.hasClass ('DELETE')) 
+					? 'curl -X DELETE --user '+apiToken+': -d "'+dataStr+'" '+baseUrl+path+' -3 -k' 
+					: 'curl --user '+apiToken+': "'+baseUrl+path+'?'+dataStr+'" -3 -k';
 			$(this).text(curl);
 		});
 

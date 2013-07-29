@@ -29,13 +29,13 @@ layout: default
           {% when 410 %}This API call is deprecated in this API
           {% endcase %}">{{ code }}</span>{% endfor %}
       </p>
-      {% if pos5t.type == 'GET' %}
+      {% if post.type == 'GET' %}
       	<h3>Try in browser</h3>
       	<p><a class="try" data-params="{{ post.params }}" href="#"></a></p>
       {% endif %}
       {% if post.type %}
       	<h3>Try in terminal</h3>
-      	<p><code class="try" data-params="{{ post.params }}"></code></p>
+      	<p><textarea readonly="readonly" class="try" data-params="{{ post.params }}"></textarea></p>
       {% endif %}
     </section>
   </article>

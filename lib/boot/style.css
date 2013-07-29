@@ -248,7 +248,7 @@ code {
   padding: 15px 15px 0;
 }
 
-#content .body code {
+#content .body code, textarea.try {
   border: 1px solid #e2e7ea;
   background: #eef1f2;
   border-radius: 2px;
@@ -261,8 +261,13 @@ code {
 #content .body p > code {
   display: block;
   padding: 15px;
-  overflow-x: scroll;
   white-space: pre;
+}
+
+textarea.try {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
 }
 
 .status-code {
