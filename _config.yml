@@ -4,4 +4,4 @@ permalink: ':title'
 pygments: true
 safe: false
 title: 'API Documentation'
-api_url: 'https://enketo.formhub.net/api_v1'
+api_url: 'https://enketo-dev.formhub.org/api_v1'
