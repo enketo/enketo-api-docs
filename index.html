@@ -26,7 +26,7 @@ layout: default
           {% when 403 %}Authentication succeeded, but account is not active or quota is filled up
           {% when 404 %}Resource was not found in database
           {% when 405 %}Request not allowed. You may not have API access on your plan
-          {% when 410 %}This API call is deprecated in this API
+          {% when 410 %}This API endpoint is deprecated in this version
           {% endcase %}">{{ code }}</span>{% endfor %}
       </p>
       {% if post.type == 'GET' %}
