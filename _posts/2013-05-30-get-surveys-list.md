@@ -21,30 +21,19 @@ Sends back an object with launched forms.
 
 ```Status: 200 OK```
 ```{
-    'forms': [
+     "forms": [
         {
-            "form_id" : "Birds",
-            "name": "Crowd/Birds",
-            "description": "",
-            "url": "https://birds.enketo.org/webform",
-            "server": "https://formhub.org/formhub_u",
-            "delete_allowed" : false
+            "form_id": "widgets",
+            "transform_result_title": "widgets",
+            "url": "https:\/\/widgets.enketo-dev.formhub.org\/webform",
+            "delete_allowed": false
         },
         {
-            "form_id" : "Cascading Example"
-            "name": "Cascading_Example",
-            "description": "",
-            "url": "https://cra4e.enketo.org/webform",
-            "server": "https://formhub.org/formhub_u"
-            "delete_allowed" : true,
-        },
-            "form_id" : consent_signature",
-            "name": "consent_signature",
-            "title": "Sample consent form with signature widget.",
-            "url": "https://0qpeo.enketo.org/webform",
-            "server": "https://formhub.org/formhub_u",
-            "delete_allowed" : false
+            "form_id": "Birds",
+            "transform_result_title": "Birds",
+            "url": "https:\/\/6eltm.enketo-dev.formhub.org\/webform",
+            "delete_allowed": false
         }
     ],
-    'code':    '200'
+    "code": "200"
 }```
