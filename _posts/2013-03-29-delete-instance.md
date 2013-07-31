@@ -10,7 +10,7 @@ layout: nil
 
 ### Request
 
-* this method may not be required as instances for eding are only cached/saved very briefly in enketo (available for maximum of 1 minute)
+* this method _may not have a practical use_ as instances POSTed to enketo for editing are only cached/saved very briefly (available for a maximum of 1 minute)
 * required parameter **`server_url`** is the url of the OpenRosa server your form is hosted on.
 * required parameter **`form_id`** is the ID of the form listed in _SERVER_/formList.
 * required parameter **`instance_id`** is the instanceID (inside the meta node) of instance to be edited.

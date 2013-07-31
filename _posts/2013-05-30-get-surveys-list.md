@@ -25,13 +25,13 @@ Sends back an object with launched forms.
         {
             "form_id": "widgets",
             "transform_result_title": "widgets",
-            "url": "https:\/\/widgets.enketo-dev.formhub.org\/webform",
+            "url": "https://widgets.enketo-dev.formhub.org/webform",
             "delete_allowed": false
         },
         {
             "form_id": "Birds",
             "transform_result_title": "Birds",
-            "url": "https:\/\/6eltm.enketo-dev.formhub.org\/webform",
+            "url": "https://6eltm.enketo-dev.formhub.org/webform",
             "delete_allowed": false
         }
     ],
