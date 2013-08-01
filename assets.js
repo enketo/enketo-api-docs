@@ -9869,7 +9869,7 @@ function Magic() {
 		$curlTries = $('textarea.try');
 
 	$('em:contains("SERVER")').replaceWith('<span class="server_url"></span>');
-	$('em:constains("ID")').replaceWith('<span class="form_id"></span>');
+	$('em:contains("ID")').replaceWith('<span class="form_id"></span>');
 	$('en:contains("API_TOKEN")').replaceWith('<span class="api_token"></span>');
 	$refs.serverUrl = $('.server_url');
 	$refs.formId = $('.form_id');
@@ -9919,6 +9919,7 @@ function Magic() {
 				dataStr += (i === 0) ? '' : '&';
 				dataStr += paramNames[i]+'='+paramVals[paramNames[i]];
 			}
+
 			curl = ($article.hasClass('POST')) 
 				? 'curl --user '+apiToken+': -d "'+dataStr+'" '+baseUrl+path+' -3 -k' 
 				: ($article.hasClass ('DELETE')) 
