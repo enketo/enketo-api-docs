@@ -11,7 +11,7 @@ layout: default
   <article class='{{ post.type }}' data-path='{{ post.path }}'>
     <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.path }}</code> {% endif %}{{ post.title }}</h2></a>
     <section class='body'>
-      {% if post.type == 'GET' and post.category == 'survey' %}<p>This method is meant to test the API in the browser. It is probably not of any practical use as the POST version is the one to use to integrate enketo.</p>{% endif %}
+      {% if post.type == 'GET' and post.category == 'survey' %}<p>This method is meant to test the Enketo Smart Paper API in the browser. It is probably not of any practical use as the POST version is the one to use to integrate Enketo.</p>{% endif %}
       {{ post.content }}
       {% if post.type %}<p>For error responses, see the <a href="#/response-status-codes">response status codes documentation</a>.</p>{% endif %}
       <p>
