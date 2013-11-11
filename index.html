@@ -31,6 +31,7 @@ layout: default
       </p>
       {% if post.type == 'GET' %}
       	<h3>Try in browser</h3>
+        <p class="tip">Enter API token as username when asked.</p>
       	<p><a class="try" data-params="{{ post.params }}" href="#"></a></p>
       {% endif %}
       {% if post.type %}

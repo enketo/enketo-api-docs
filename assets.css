@@ -652,6 +652,12 @@ code {
 #content h3 {
 }
 
+#content .tip{
+  font-size: 12px;
+  color: #666;
+  margin-top: -18px;
+}
+
 #content .body {
   border-top: 1px solid #eef1f2;
   display: block;
