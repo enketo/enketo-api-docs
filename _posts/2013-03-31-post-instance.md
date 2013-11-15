@@ -12,7 +12,7 @@ layout: nil
 
 * required parameter **`server_url`** is the url of the OpenRosa server your form is hosted on.
 * required parameter **`form_id`** is the ID of the form listed in _SERVER_/formList.
-* required parameter **`instance`** is the XML instance to be edited.
+* required parameter **`instance`** is the XML instance with _escaped quotation marks_ to be edited.
 * required parameter **`instance_id`** is the instanceID (inside the meta node) of instance to be edited.
 * required parameter **`return_url`** is the URL to redirect the user to after editing is complete.
 * The headers must include a **valid authentication token**.
