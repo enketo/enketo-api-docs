@@ -16,7 +16,7 @@ layout: nil
 * required parameter **`instance_id`** is the instanceID (inside the meta node) of instance to be edited.
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic API_TOKEN:```
+```Authorization: Basic API_TOKEN:```
 
 ### Response
 

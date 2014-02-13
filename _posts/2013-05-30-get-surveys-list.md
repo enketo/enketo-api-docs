@@ -13,7 +13,7 @@ layout: nil
 * required parameter **`server_url`** is the url of the OpenRosa server your form is hosted on.
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic API_TOKEN:```
+```Authorization: Basic API_TOKEN:```
 
 ### Response
 

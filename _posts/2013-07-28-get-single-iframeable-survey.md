@@ -14,7 +14,7 @@ layout: nil
 * required parameter **`form_id`** is the ID of the form listed in _SERVER_/formList.
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic API_TOKEN:```
+```Authorization: Basic API_TOKEN:```
 
 ### Response
 

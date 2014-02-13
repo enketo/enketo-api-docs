@@ -17,7 +17,7 @@ layout: nil
 * required parameter **`return_url`** is the URL to redirect the user to after editing is complete.
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic API_TOKEN:```
+```Authorization: Basic API_TOKEN:```
 
 ### Response
 

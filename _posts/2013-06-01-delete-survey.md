@@ -15,7 +15,7 @@ layout: nil
 * if the form is still listed in the _SERVER_/formList, the response will have code 405!
 * The headers must include a **valid authentication token**.
 
-```Authentication: basic API_TOKEN:```
+```Authorization: Basic API_TOKEN:```
 
 ### Response
 
