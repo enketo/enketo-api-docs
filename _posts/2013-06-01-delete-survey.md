@@ -4,7 +4,7 @@ path: '/survey'
 title: 'De-activate a survey'
 type: 'DELETE'
 params: 'server_url form_id'
-codes: [200, 400, 401, 403, 404, 405, 410]
+codes: [204, 400, 401, 403, 404, 405, 410]
 layout: nil
 ---
 
