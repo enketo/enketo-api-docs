@@ -22,5 +22,5 @@ layout: nil
 
 ```Status: 204 OK (found in db, checked that it is no longer listed in /formList, and de-activated)```
 ```{
-    code: '204'
+    [EMPTY]
 }```

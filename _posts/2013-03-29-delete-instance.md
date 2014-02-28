@@ -23,5 +23,5 @@ layout: nil
 
 ```Status: 204 OK (instance was deleted)```
 ```{
-    code: '204'
+   [EMPTY]
 }```
