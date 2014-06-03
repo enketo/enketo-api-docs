@@ -27,7 +27,6 @@ Sends back an object including a preview_url property.
     'single_url' :          'https://abcde.enketo.org/webform/single',
     'single_iframe_url' :   'https://abcde.enketo.org/webform/single?iframe=true',
     'preview_url':          'https:/enketo.org/webform/preview?server_url=....&form_id=...',
-    'prview_iframe_url' :   'https:/enketo.org/webform/preview?iframe=true&server_url=....&form_id=...',
-    'subdomain' :           'abcde',
+    'preview_iframe_url' :  'https:/enketo.org/webform/preview?iframe=true&server_url=....&form_id=...',
     'code':                 '200'
 }```

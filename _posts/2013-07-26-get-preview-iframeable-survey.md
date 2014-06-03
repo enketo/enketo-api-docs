@@ -1,7 +1,7 @@
 ---
 category: survey
 path: '/survey/preview/iframe'
-title: 'Get a survey preview (existing)'
+title: 'Get an iframe-able survey preview (existing)'
 type: 'GET'
 params: 'server_url form_id'
 codes: [200, 400, 401, 403, 404, 405, 410]

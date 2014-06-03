@@ -22,6 +22,6 @@ Sends back an object including an single_iframe_url property.
 
 ```Status: 200 OK (existing)    Status: 201 OK (new)```
 ```{
-    single_iframe_url:  'https://abcde.enketo.org/webform/single?iframe=true',
+    single_url:  'https://abcde.enketo.org/webform/single?iframe=true',
     code: '200'
 }```

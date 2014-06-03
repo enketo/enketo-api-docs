@@ -22,6 +22,6 @@ Sends back an object including the iframe_url property.
 
 ```Status: 200 OK (if it already existed)```
 ```{
-    iframe_url:  'https://abcde.enketo.org/webform',
+    iframe_url:  'https://abcde.enketo.org/webform?iframe=true',
     code: '200'
 }```
