@@ -22,6 +22,6 @@ Sends back an object including a preview_url property.
 
 ```Status: 200 OK (if it already existed)```
 ```{
-    preview_url:  'https:/enketo.org/webform/preview?iframe=true&server_url=....&form_id=...',
+    preview_url:  'https://enketo.org/webform/preview?iframe=true&server_url=....&form_id=...',
     code: '200'
 }```

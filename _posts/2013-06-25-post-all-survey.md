@@ -26,7 +26,7 @@ Sends back an object including the iframe_url property.
     'iframe_url' :          'https://abcde.enketo.org/webform?iframe=true',
     'single_url' :          'https://abcde.enketo.org/webform/single',
     'single_iframe_url' :   'https://abcde.enketo.org/webform/single?iframe=true',
-    'preview_url':          'https:/enketo.org/webform/preview?server_url=....&form_id=...',
-    'preview_iframe_url' :   'https:/enketo.org/webform/preview?iframe=true&server_url=....&form_id=...',
+    'preview_url':          'https://enketo.org/webform/preview?server_url=....&form_id=...',
+    'preview_iframe_url' :  'https://enketo.org/webform/preview?iframe=true&server_url=....&form_id=...',
     'code':                 '200'
 }```
