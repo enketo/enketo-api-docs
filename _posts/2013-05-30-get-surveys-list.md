@@ -5,7 +5,7 @@ title: 'Get the list of launched surveys'
 type: 'GET'
 params: 'server_url'
 codes: [200, 400, 401, 403, 404, 410]
-layout: nil
+layout: null
 ---
 
 ### Request

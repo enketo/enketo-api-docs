@@ -5,7 +5,7 @@ title: 'Delete a temporary instance'
 type: 'DELETE'
 params: 'server_url form_id instance_id'
 codes: [204, 400, 401, 403, 404, 405, 410]
-layout: nil
+layout: null
 ---
 
 ### Request

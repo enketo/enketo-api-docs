@@ -1,7 +1,7 @@
 ---
 exclude: ['README.markdown']
 permalink: ':title'
-pygments: true
+highlighter: 'pygments'
 safe: false
 title: 'API Documentation'
 api_url: 'https://enketo.org/api_v1'

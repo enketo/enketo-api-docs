@@ -1,6 +1,6 @@
 ---
 title: 'Test Responses'
-layout: nil
+layout: null
 ---
 
 ### Tests

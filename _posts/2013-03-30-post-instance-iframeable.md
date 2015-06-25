@@ -5,7 +5,7 @@ title: 'Post an instance for editing (iframeable response)'
 type: 'POST'
 params: 'server_url form_id instance instance_id return_url'
 codes: [201, 400, 401, 403, 404, 405, 410]
-layout: nil
+layout: null
 ---
 
 ### Request

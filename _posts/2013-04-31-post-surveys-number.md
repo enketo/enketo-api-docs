@@ -5,7 +5,7 @@ title: 'Get the number of launched surveys'
 type: 'POST'
 params: 'server_url'
 codes: [200, 400, 401, 403, 404, 410]
-layout: nil
+layout: null
 ---
 
 ### Request

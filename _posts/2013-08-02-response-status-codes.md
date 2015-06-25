@@ -1,7 +1,7 @@
 ---
 title: 'Response status codes'
 codes:  [400, 401, 403, 404, 405, 410]
-layout: nil
+layout: null
 ---
 
 ### Success
