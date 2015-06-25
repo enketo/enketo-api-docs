@@ -23,10 +23,12 @@ Sends back an object with launched forms.
 ```{
      "forms": [
         {
+            "server_url": "https://myserver.com/bob",
             "form_id": "widgets",
             "url": "https://widgets.enketo-dev.formhub.org/webform"
         },
         {
+            "server_url": "https://myserver.com/bob",
             "form_id": "Birds",
             "url": "https://6eltm.enketo-dev.formhub.org/webform"
         }
