@@ -2,8 +2,7 @@
 !.gitignore
 !.gitmodules
 *~
-
-components/
+node_modules
 
 _site/
 

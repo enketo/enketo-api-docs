@@ -1,6 +1,11 @@
----
-exclude: ['README.markdown']
-permalink: ':title'
-highlighter: 'pygments'
-safe: false
-title: 'API Documentation'
+# Site settings
+title: Enketo API Documentation
+exclude: [ README.md ]
+permalink: :categories
+
+# Build settings
+highlighter: pygments
+safe: true
+collections:
+  api:
+    output: false

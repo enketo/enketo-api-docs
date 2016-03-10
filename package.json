@@ -1,0 +1,28 @@
+{
+  "name": "enketo-api-docs",
+  "version": "1.0.0",
+  "description": "Enketo API Documentation",
+  "main": "assets.js",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "jquery": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enketo/enketo-api-docs.git"
+  },
+  "keywords": [
+    "Enketo",
+    "API"
+  ],
+  "author": "Martijn van de Rijdt <martijn@enketo.org> (https://enketo.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enketo/enketo-api-docs/issues"
+  },
+  "homepage": "https://github.com/enketo/enketo-api-docs#readme"
+}

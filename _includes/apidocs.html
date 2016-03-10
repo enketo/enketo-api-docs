@@ -1,0 +1,64 @@
+{% for doc in site.api %}
+  {% if doc.categories[0] == nil or doc.categories[0] == version %}
+    {% assign params = doc.params | map: 'name' | join: ' ' %}
+    {% capture id %}{{doc.type | downcase}}{% for item in doc.categories offset:1 %}-{{ item }}{% endfor %}{% endcapture %}
+    {% if id == "" %}{% assign id = doc.slug %}{% endif %}
+    {% capture endpoint %}                 {% for item in doc.categories offset:1 %}/{{ item }}{% endfor %}{% endcapture %}
+    <article class="{{ doc.type }}" data-path="/{{ doc.categories | join: '/' }}">
+      <a id="{{ id }}" href="#{{id}}"><h2>{% if doc.type %}<code><b>{{ doc.type }}</b> {{ endpoint }}</code> {% endif %}{{ doc.title }}</h2></a>
+      <section class="body">
+        {% if doc.type == 'GET' and doc.categories[1] == 'survey' %}<p>The GET method is meant to test the Enketo Smart Paper API in the browser. It does not launch <strong>new</strong> surveys and is therefore not of use for integrating with Enketo.</p>{% endif %}
+        {% if doc.changes %}<div class="changes">{% for change in doc.changes %}<p>{{ change }}</p>{% endfor %}</div>{% endif %}
+        <p>{{ doc.description }}</p>
+
+        {% if doc.params %}
+        <h3>Request</h3>
+          <ul>
+          {% for param in doc.params %}
+            <li>{% if param.required == nil %}required {% else %}optional {% endif %}
+              {% if param.name == 'server_url' %}parameter <strong><code>server_url</code></strong> is the url of the OpenRosa server your form is hosted on
+              {% elsif param.name == 'form_id' %}parameter <strong><code>form_id</code></strong> is the ID of the form listed in <em>SERVER</em>/formList
+              {% elsif param.name == 'theme' %}parameter <strong><code>theme</code></strong> can be used to centrally override the theme for all subsequent users, or to reset the theme with an emtpy string value
+              {% elsif param.name == 'return_url' %}parameter <strong><code>return_url</code></strong> is the URL to redirect the user to after submission
+              {% elsif param.name == 'instance' %}parameter <strong><code>instance</code></strong> is the XML instance with <em>escaped quotation marks</em> to be edited
+              {% elsif param.name == 'instance_id' %}parameter <strong><code>instance_id</code></strong> is the URL to redirect the user to after editing is complete
+              {% elsif param.name == 'defaults' %}parameter <strong><code>defaults[]</code></strong> can be used to dynamically override survey field defaults
+              {% elsif param.name == 'parent_window_origin' %}parameter <strong><code>parent_window_origin</code></strong> can be used to safely enable an iframed survey to post messages back to the parent window
+              {% endif %}
+            </li>
+          {% endfor %}
+            <li>headers must include a <strong>valid API key as username in the Authorization header</strong></li>
+          </ul>
+          <p><code>Authorization: Basic API_KEY:</code></p>
+        {% endif %}
+
+        {{ doc.content }}
+        {% if doc.type %}<p>For error responses, see the <a href="#/response-status-codes">response status codes documentation</a>.</p>{% endif %}
+        <p>
+        {% for code in doc.codes %}
+        <span class="status-code {% if code == 200 or code == 201 or code == 202 %}ok{% else %}error{% endif %}" 
+         data-title="{% case code %}
+            {% when 200 %}Record existed, request succeeded.
+            {% when 201 %}Record was created, request succeeded.
+            {% when 204 %}Request succeeded, empty response.
+            {% when 400 %}Malformed request, maybe parameters are missing.
+            {% when 401 %}Authentication failed, incorrect or expired API token used or none at all.
+            {% when 403 %}Authentication succeeded, but account is not active or quota is filled up.
+            {% when 404 %}Resource was not found in database.
+            {% when 405 %}Request not allowed. This endpoint may be disabled or not implemented.
+            {% when 410 %}This API endpoint is deprecated in this version.
+            {% endcase %}">{{ code }}</span>{% endfor %}
+        </p>
+        {% if doc.type == 'GET' %}
+          <h3>Try in browser</h3>
+          <p class="tip">Enter API token as username when asked.</p>
+          <p><a class="try" data-params="{{ params }}" href="#"></a></p>
+        {% endif %}
+        {% if doc.type %}
+          <h3>Try in terminal</h3>
+          <p><textarea readonly="readonly" class="try" data-params="{{ params }}"></textarea></p>
+        {% endif %}
+      </section>
+    </article>
+  {% endif %}
+{% endfor %}

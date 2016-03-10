@@ -1,0 +1,39 @@
+<a href="https://enketo.org">
+  <img src="/api/media/enketo_smart_paper_Ewhite_186x100.png" alt="Enketo logo" />
+</a>
+<h1>{{ site.title }}</h1>
+<div class="sidebar__version-switcher">
+  <a class="sidebar__version-switcher__v1" href="/v1">v1</a>
+  <a class="sidebar__version-switcher__v2" href="/v2">v2</a>
+</div>
+<label for="apiToken">API Key</label>
+<input id="apiToken" name="apiToken" type="text" placeholder="Enter Token" value="abc"/>
+<label for="serverUrl">Server URL</label>
+<input id="serverUrl" name="serverUrl" type="text" placeholder="Enter your server URL" value="https://testserver.com/bob"/>
+<label for="formId">Form ID</label>
+<input id="formId" name="formId" type="text" placeholder="Enter Form ID (optional)" value="widgets"/>
+<label for="enketoUrl">Enketo URL</label>
+<input id="enketoUrl" name="enketoUrl" type="text" placeholder="Enter Enketo URL" value="https://enke.to"/>
+<ul id='links'>
+  {% for doc in site.api | group_by:"categories[1]" %}
+    {% if doc.categories[0] == nil or doc.categories[0] == version %}
+      {% assign newCategory = doc.categories[1] %}
+      {% if oldCategory and oldCategory != newCategory %}
+          </ul>
+        </li>
+      {% endif %}
+      {% if newCategory == nil %}
+        <li><a href='#{{ doc.slug }}'>{{ doc.title }}</a></li>
+      {% elsif newCategory != oldCategory %}
+        <li><h2>{{ newCategory }}</h2>
+          <ul>
+            <li class='{{ doc.type }}'><a href='#{{ doc.categories | join: '-' }}'>{{ doc.title }}</a></li>
+      {% elsif newCategory == oldCategory %}
+            <li class='{{ doc.type }}'><a href='#{{ doc.categories | join: '-' }}'>{{ doc.title }}</a></li>
+      {% endif %}
+      {% assign oldCategory = newCategory %}
+    {% endif %}
+  {% endfor %}
+    </ul>
+  </li>
+</ul>
