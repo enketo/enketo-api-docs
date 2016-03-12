@@ -4,7 +4,7 @@ This is a fork of the marvellous [carte](https://github.com/devo-ps/carte) repos
 
 ### Install
 
-1. install browserify with `npm install -g browserify`
+1. install browserify with `sudo npm install -g browserify`
 
 ### Build
 

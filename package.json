@@ -4,7 +4,6 @@
   "description": "Enketo API Documentation",
   "main": "assets.js",
   "dependencies": {
-    "browserify": "^13.0.0",
     "jquery": "^2.2.1"
   },
   "devDependencies": {},
