@@ -5,7 +5,7 @@
     {% if id == "" %}{% assign id = doc.slug %}{% endif %}
     {% capture endpoint %}                 {% for item in doc.categories offset:1 %}/{{ item }}{% endfor %}{% endcapture %}
     <article class="{{ doc.type }}" data-path="/{{ doc.categories | join: '/' }}">
-      <a id="{{ id }}" href="#{{id}}"><h2>{% if doc.type %}<code><b>{{ doc.type }}</b> {{ endpoint }}</code> {% endif %}{{ doc.title }}</h2></a>
+      <a id="{{ id }}" href="#/{{id}}"><h2>{% if doc.type %}<code><b>{{ doc.type }}</b> {{ endpoint }}</code> {% endif %}{{ doc.title }}</h2></a>
       <section class="body">
         {% if doc.type == 'GET' and doc.categories[1] == 'survey' %}<p>The GET method is meant to test the Enketo Smart Paper API in the browser. It does not launch <strong>new</strong> surveys and is therefore not of use for integrating with Enketo.</p>{% endif %}
         {% if doc.changes %}<div class="changes">{% for change in doc.changes %}<p>{{ change }}</p>{% endfor %}</div>{% endif %}

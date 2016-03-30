@@ -32,28 +32,32 @@ $('article').each(function() {
     );
 });
 
-var anchor = window.location.hash.substring(1);
-if (anchor) {
-    $('article a#' + anchor).trigger('click');
-}
-
 // Expanding the article on link click and scrolling down to it
-$('#sidebar .links a').each(function() {
+$('#sidebar #links a').each(function() {
     var that = $(this);
-    var id = that.attr('href').substring(1);
+    var href = that.attr('href');
+    var id = href.substring(2);
     that.click(function(e) {
         var header = $('article a#' + id);
-        if (!header.parent().hasClass('active')) header.trigger('click');
+        if (!header.parent().hasClass('active')) {
+            header.trigger('click');
+        }
         $('html, body').animate({
             scrollTop: header.offset().top
         }, 'fast');
     });
 
     // If we find a link in the body with similar anchor, add the same behavior
-    $('.body a[href="#' + id + '"]').click(function(e) {
-        $('#sidebar a[href="#' + id + '"]').trigger('click');
+    $('#content a[href=\"' + href + '\"]').click(function(e) {
+        $('#sidebar a[href=\"' + href + '\"]').trigger('click');
     });
 });
+
+// open article upon load
+var anchor = window.location.hash.substring(2);
+if (anchor) {
+    $('article a#' + anchor).trigger('click');
+}
 
 // Hide all/Show all links
 $('.control.show').click(function() {

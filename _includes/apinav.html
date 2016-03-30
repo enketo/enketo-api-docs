@@ -18,18 +18,19 @@
   {% for doc in site.api | group_by:"categories[1]" %}
     {% if doc.categories[0] == nil or doc.categories[0] == version %}
       {% assign newCategory = doc.categories[1] %}
+      {% capture link %}{{doc.type | downcase}}{% for item in doc.categories offset:1 %}-{{ item }}{% endfor %}{% endcapture %}
       {% if oldCategory and oldCategory != newCategory %}
           </ul>
         </li>
       {% endif %}
       {% if newCategory == nil %}
-        <li><a href='#{{ doc.slug }}'>{{ doc.title }}</a></li>
+        <li><a href='#/{{ doc.slug }}'>{{ doc.title }}</a></li>
       {% elsif newCategory != oldCategory %}
         <li><h2>{{ newCategory }}</h2>
           <ul>
-            <li class='{{ doc.type }}'><a href='#{{ doc.categories | join: '-' }}'>{{ doc.title }}</a></li>
+            <li class='{{ doc.type }}'><a href='#/{{ link }}'>{{ doc.title }}</a></li>
       {% elsif newCategory == oldCategory %}
-            <li class='{{ doc.type }}'><a href='#{{ doc.categories | join: '-' }}'>{{ doc.title }}</a></li>
+            <li class='{{ doc.type }}'><a href='#/{{ link }}'>{{ doc.title }}</a></li>
       {% endif %}
       {% assign oldCategory = newCategory %}
     {% endif %}
