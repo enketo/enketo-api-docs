@@ -19,7 +19,7 @@ Sends back an object with various properties.
 ```{
     "url":                  "https://enke.to/::abcd",
     "iframe_url":           "https://enke.to/i/::abcd",
-    "single_url":           "https://enke.to/single/i/::werdgag3e423gsgadgsd",
+    "single_url":           "https://enke.to/single/::werdgag3e423gsgadgsd",
     "single_iframe_url":    "https://enke.to/single/i/::werdgag3e423gsgadgsd",
     "preview_url":          "https://enke.to/preview/::abcd",
     "preview_iframe_url":   "https://enke.to/preview/i/::abcd",
