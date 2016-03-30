@@ -33,7 +33,7 @@
         {% endif %}
 
         {{ doc.content }}
-        {% if doc.type %}<p>For error responses, see the <a href="#/response-status-codes">response status codes documentation</a>.</p>{% endif %}
+        {% if doc.type %}<p>For error responses, see the <a href="#/1000-response-status-codes">response status codes documentation</a>.</p>{% endif %}
         <p>
         {% for code in doc.codes %}
         <span class="status-code {% if code == 200 or code == 201 or code == 202 %}ok{% else %}error{% endif %}" 

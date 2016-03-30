@@ -12,7 +12,7 @@ Successes differ from errors in that their body may not be a simple response obj
 * `POST ` returns 201 on success if a new database entry was created,
 * `DELETE` returns 204, without a body, if the entry was deleted
 
-When [retrieving stuff](#get-a-survey-url) for example:
+When [retrieving stuff](#/get-survey) for example:
 
 ```Status: 200 OK```
 ```{
