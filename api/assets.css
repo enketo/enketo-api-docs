@@ -737,6 +737,7 @@ code {
     display: block;
     padding: 15px;
     white-space: pre;
+    overflow: auto;
 }
 
 a.try {
