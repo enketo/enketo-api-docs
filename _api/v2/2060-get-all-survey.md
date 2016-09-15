@@ -7,6 +7,8 @@ params:
   - name: form_id
   - name: return_url
     required: false
+  - name: allow_multiple
+    required: false
   - name: defaults
     required: false
   - name: parent_window_origin

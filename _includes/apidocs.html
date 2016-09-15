@@ -7,10 +7,10 @@
     <article class="{{ doc.type }}" data-path="/{{ doc.categories | join: '/' }}">
       <a id="{{ id }}" href="#/{{id}}"><h2>{% if doc.type %}<code><b>{{ doc.type }}</b> {{ endpoint }}</code> {% endif %}{{ doc.title }}</h2></a>
       <section class="body">
-        {% if doc.type == 'GET' and doc.categories[1] == 'survey' %}<p>The GET method is meant to test the Enketo Smart Paper API in the browser. It does not launch <strong>new</strong> surveys and is therefore not of use for integrating with Enketo.</p>{% endif %}
+        <p>{{ doc.description | markdownify }}</p>
+        {% if doc.type == 'GET' and doc.categories[1] == 'survey' %}<p>The GET version of this endpoint is only meant to test the Enketo Smart Paper API in the browser. It does not launch <strong>new</strong> surveys and is therefore not of use for integrating with Enketo.</p>{% endif %}
         {% if doc.changes %}<div class="changes">{% for change in doc.changes %}<p>{{ change }}</p>{% endfor %}</div>{% endif %}
-        <p>{{ doc.description }}</p>
-
+        
         {% if doc.params %}
         <h3>Request</h3>
           <ul>
@@ -19,7 +19,8 @@
               {% if param.name == 'server_url' %}parameter <strong><code>server_url</code></strong> is the url of the OpenRosa server your form is hosted on
               {% elsif param.name == 'form_id' %}parameter <strong><code>form_id</code></strong> is the ID of the form listed in <em>SERVER</em>/formList
               {% elsif param.name == 'theme' %}parameter <strong><code>theme</code></strong> can be used to centrally override the theme for all subsequent users, or to reset the theme with an emtpy string value
-              {% elsif param.name == 'return_url' %}parameter <strong><code>return_url</code></strong> is the URL to redirect the user to after submission
+              {% elsif param.name == 'return_url' %}parameter <strong><code>return_url</code></strong> is the URL to redirect the user to after submission on single submit surveys (default is a generic thank you page)
+              {% elsif param.name == 'allow_multiple' %}parameter <strong><code>allow_multiple</code></strong> is either <code>true</code> or <code>false</code> (default) and determines whether the same user may submit multiple times on single-submit surveys
               {% elsif param.name == 'instance' %}parameter <strong><code>instance</code></strong> is the XML instance with <em>escaped quotation marks</em> to be edited
               {% elsif param.name == 'instance_id' %}parameter <strong><code>instance_id</code></strong> is the instanceID of the existing record to be edited
               {% elsif param.name == 'defaults' %}parameter <strong><code>defaults[]</code></strong> can be used to dynamically override survey field defaults

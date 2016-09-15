@@ -21,6 +21,6 @@ Sends back an object including a preview_url property.
 
 ```Status: 200 OK (existing)    Status: 201 OK (new)```
 ```{
-    "preview_url":  "https://enke.to/preview/i/::abcd",
+    "preview_iframe_url":  "https://enke.to/preview/i/::abcd",
     "code": 200
 }```

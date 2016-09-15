@@ -8,4 +8,5 @@ This is a fork of the marvellous [carte](https://github.com/devo-ps/carte) repos
 
 ### Build
 
-1. Build with `browserify ./src/js/boot.js -o ./api/assets.js` from project root
+1. Build JS with `browserify ./src/js/boot.js -o ./api/assets.js` from project root
+2. Build HTML with `jekyll build`
