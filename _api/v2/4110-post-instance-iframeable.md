@@ -1,6 +1,7 @@
 ---
 categories: [v2, instance, iframe]
 title: Post an instance for editing (iframeable response)
+description: This webform view edits an existing already-submitted finalized record.
 type: POST
 params: 
   - name: server_url 

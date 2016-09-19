@@ -29,13 +29,15 @@ Sends back an object with various properties.
 
 ```Status: 200 OK (existing)    Status: 201 OK (new)```
 ```{
-    "url":                  "https://enke.to/::abcd",
-    "iframe_url":           "https://enke.to/i/::abcd",
-    "offline_url":          "https://enke.to/_/#abcd",
-    "single_url":           "https://enke.to/single/::werdgag3e423gsgadgsd",
-    "single_iframe_url":    "https://enke.to/single/i/::werdgag3e423gsgadgsd",
-    "preview_url":          "https://enke.to/preview/::abcd",
-    "preview_iframe_url":   "https://enke.to/preview/i/::abcd",
-    "enketo_id":            "abcd",
-    "code":                 200
+    "url":                    "https://enke.to/::abcd",
+    "iframe_url":             "https://enke.to/i/::abcd",
+    "offline_url":            "https://enke.to/_/#abcd",
+    "single_url":             "https://enke.to/single/::abcd",
+    "single_iframe_url":      "https://enke.to/single/i/::abcd",
+    "single_once_url":        "https://enke.to/single/::werdgag3e423gsgadgsd",
+    "single_once_iframe_url": "https://enke.to/single/i/::werdgag3e423gsgadgsd",
+    "preview_url":            "https://enke.to/preview/::abcd",
+    "preview_iframe_url":     "https://enke.to/preview/i/::abcd",
+    "enketo_id":              "abcd",
+    "code":                   200
 }```

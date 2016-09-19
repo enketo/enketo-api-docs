@@ -20,7 +20,6 @@
               {% elsif param.name == 'form_id' %}parameter <strong><code>form_id</code></strong> is the ID of the form listed in <em>SERVER</em>/formList
               {% elsif param.name == 'theme' %}parameter <strong><code>theme</code></strong> can be used to centrally override the theme for all subsequent users, or to reset the theme with an emtpy string value
               {% elsif param.name == 'return_url' %}parameter <strong><code>return_url</code></strong> is the URL to redirect the user to after submission on single submit surveys (default is a generic thank you page)
-              {% elsif param.name == 'allow_multiple' %}parameter <strong><code>allow_multiple</code></strong> is either <code>true</code> or <code>false</code> (default) and determines whether the same user may submit multiple times on single-submit surveys
               {% elsif param.name == 'instance' %}parameter <strong><code>instance</code></strong> is the XML instance with <em>escaped quotation marks</em> to be edited
               {% elsif param.name == 'instance_id' %}parameter <strong><code>instance_id</code></strong> is the instanceID of the existing record to be edited
               {% elsif param.name == 'defaults' %}parameter <strong><code>defaults[]</code></strong> can be used to dynamically override survey field defaults

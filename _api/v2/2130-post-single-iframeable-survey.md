@@ -1,7 +1,7 @@
 ---
 categories: [v2, survey, single, iframe]
 title: Get an online-only single-submit iframe-able survey (new or existing)
-description: This webform view will **always** redirect the user upon successful submission of a record.
+description: This webform view will **always** redirect the user upon successful submission of a single record.
 type: POST
 params: 
   - name: server_url 
@@ -9,8 +9,6 @@ params:
   - name: theme
     required: false
   - name: return_url
-    required: false
-  - name: allow_multiple
     required: false
   - name: defaults
     required: false
@@ -20,7 +18,6 @@ codes: [200, 400, 401, 403, 404, 405, 410]
 layout: null
 changes: 
   - In API v2 the theme, defaults, and parent_window_origin parameters were added.
-  - In API v2 the allow_multiple parameter was added.
 ---
 
 ### Response
