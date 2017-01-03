@@ -53,22 +53,14 @@ header {
     max-width: 100%;
 }
 
-.content-ui {
-    max-width: none;
-}
-
-.header__branding {
-    margin-left: 62px;
-}
-
 #content {
     flex: 1;
 }
 
 /* SIDEBAR */
 #sidebar {
-    background: #222222;
-    color: #fff;
+    background: #e6e6e6;
+    color: #222222;
     width: 240px;
 }
 
@@ -107,7 +99,7 @@ header {
 }
 
 #sidebar ul li a {
-    color: #fff;
+    color: #222222;
     display: block;
     padding: 0 0 15px;
 }
@@ -125,7 +117,7 @@ header {
 #sidebar input {
     background: #cccccc;
     border: 0;
-    width: 200px;
+    width: calc(100% - 20px);
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -133,7 +125,7 @@ header {
     -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
     color: #111;
-    margin: 0 0 20px 10px;
+    margin: 0 10px 20px 10px;
     padding: 5px 10px;
 }
 
@@ -142,7 +134,7 @@ header {
 }
 
 .sidebar__version-switcher a {
-    border: 1px solid  #52ce0e;
+    border: 1px solid   #F15A29;
     padding: 5px 10px;
     border-radius: 1px;
     display: inline-block;
@@ -153,7 +145,7 @@ header {
 
 #sidebar.v1 .sidebar__version-switcher__v1,
 #sidebar.v2 .sidebar__version-switcher__v2 {
-    background: #52ce0e;
+    background: #F15A29;
     color: white;
 }
 
@@ -188,8 +180,9 @@ header {
 
 #sidebar #links input {
     background-color: #555;
-    color: bbb;
+    color: #bbb;
     margin-left: -10px;
+    width: calc(100% + 20px);
 }
 
 /* References */
