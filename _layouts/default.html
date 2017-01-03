@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<head>
-  <title>{{ site.title }}</title>
-  <meta charset='utf-8'/>
-  <meta name="author" content="Martijn van de Rijdt (Enketo LLC)" />
-  <meta name='description' content='Enketo API Documentation'/>
-  <meta name='content' content='Enketo Smart Paper API Documentation'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
-  <link rel="stylesheet" href="{{ site.data.navigation.sites['enketo-main'] }}/css/minimum.css" type="text/css" media="screen" />
-  <link href='/api/assets.css' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'/>
-  <link rel="shortcut icon" href="/api/media/favicon.ico">
-</head>
-<body>  
-  {% include header.html %}
-  
-  <div class="main">
-    {{ content }}
-  </div>
-  
-  {% include footer.html %}
-  <script async src='/api/assets.js' type='text/javascript'></script>
-  {% include tracking.html %}
-</body>
+<html lang="en">
+  <head>
+    <title>{{ site.title }}</title>
+    <meta charset='utf-8'/>
+    <meta name="author" content="Martijn van de Rijdt (Enketo LLC)" />
+    <meta name='description' content='Enketo API Documentation'/>
+    <meta name='content' content='Enketo Smart Paper API Documentation'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
+    <link rel="stylesheet" href="{{ site.data.navigation.sites['enketo-main'] }}/css/minimum.css" type="text/css" media="screen" />
+    <link href='/api/assets.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="shortcut icon" href="/api/media/favicon.ico">
+  </head>
+  <body>  
+    {% include header.html %}
+    
+    <div class="main">
+      {{ content }}
+    </div>
+    
+    {% include footer.html %}
+    <script async src='/api/assets.js' type='text/javascript'></script>
+    {% include tracking.html %}
+  </body>
 </html>
