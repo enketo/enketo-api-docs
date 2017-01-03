@@ -314,9 +314,13 @@ header {
     font-size: 20px;
 }
 
-#content .body {
-    border-top: 1px solid #eef1f2;
+#content .active .body {
     display: block;
+}
+
+#content .body {
+    display: none;
+    border-top: 1px solid #eef1f2;
     padding: 15px 15px 0;
 }
 
