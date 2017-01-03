@@ -1,0 +1,27 @@
+{% assign primary = site.data.navigation.primary %}
+{% assign sites = site.data.navigation.sites %}
+<footer class="footer">
+  <div class="content-ui">
+    <div class="footer__branding">
+      <a href="{{sites['enketo-main']}}/">
+        <img src="{{sites['enketo-main']}}/media/images/logos/icon_128x128_t.png" alt="Enketo icon"/>
+      </a>
+    </div>
+    <div class="footer__social">
+      <a href="https://github.com/enketo">
+        <i class="icon icon-github"></i>
+      </a>
+      <a href="https://twitter.com/enketo">
+        <i class="icon icon-twitter"></i>
+      </a>
+      <a href="http://blog.enketo.org/feed/index.xml">
+        <i class="icon icon-feed"></i>
+      </a>
+      <a href="mailto:info@enketo.org">
+        <i class="icon icon-mail"></i>
+      </a>
+    </div>
+    <div class="footer__copyright">© Copyright {{ 'now' | date: "%Y" }}, Enketo LLC</div>
+  </div>
+</footer>
+

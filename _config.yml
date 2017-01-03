@@ -1,11 +1,12 @@
 # Site settings
-title: Enketo API Documentation
+title: API Documentation
 exclude: [ README.md ]
 permalink: :categories
 
 # Build settings
 highlighter: pygments
 safe: true
+analytics: UA-6765789-14
 collections:
   api:
     output: false

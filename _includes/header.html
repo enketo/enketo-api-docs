@@ -1,0 +1,23 @@
+{% assign primary = site.data.navigation.primary %}
+{% assign sites = site.data.navigation.sites %}
+{% assign main='#{enketo-main}' %}
+{% assign blog='#{enketo-blog}' %}
+{% assign api='#{enketo-api}' %}
+<header class="header">
+    <div class="content-ui">
+        <nav class="header__primary-navbar">
+            <input id="collapse" type="checkbox"/>
+            <label for="collapse">
+                <i class="icon icon-bars"></i>
+            </label>
+            <ul>
+            {% for p in primary %}
+                <li>
+                   {% capture href %}{% if p[1]._self %}{{ p[1]._self }}{% else %}{{ p[1] }}{% endif %}{% endcapture %}
+                   <a href="{{ href | replace:main,sites['enketo-main'] | replace:api,'/'}}">{{ p[0] }}</a>
+                </li> 
+            {% endfor %}
+            </ul>
+        </nav>
+   </div>
+</header>
