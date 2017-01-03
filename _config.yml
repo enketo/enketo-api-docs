@@ -1,7 +1,8 @@
 # Site settings
 title: API Documentation
-exclude: [ README.md ]
+exclude: [ README.md, build.sh, Gemfile, Gemfile.lock, npm-debug.log, package.json ]
 permalink: :categories
+port: 4001
 
 # Build settings
 highlighter: pygments
