@@ -14,7 +14,7 @@
             {% for p in primary %}
                 <li>
                    {% capture href %}{% if p[1]._self %}{{ p[1]._self }}{% else %}{{ p[1] }}{% endif %}{% endcapture %}
-                   <a href="{{ href | replace:main,sites['enketo-main'] | replace:api,'/'}}">{{ p[0] }}</a>
+                   <a href="{{ href | replace:main,sites['enketo-main'] | replace:blog,sites['enketo-main'] | replace:api,'/'}}">{{ p[0] }}</a>
                 </li> 
             {% endfor %}
             </ul>
