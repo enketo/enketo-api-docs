@@ -5,9 +5,13 @@ permalink: :categories
 port: 4001
 
 # Build settings
-highlighter: pygments
-safe: true
-analytics: UA-6765789-14
+highlighter:    pygments
+safe:           true
+analytics:      UA-6765789-14
 collections:
   api:
-    output: false
+    output:     false
+
+# Conversion
+kramdown:    
+  auto_ids:     false

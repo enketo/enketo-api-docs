@@ -8,7 +8,6 @@ var SnippetBuilder = require('./snippets');
 $('article').each(function() {
     var that = $(this);
     var header = that.children('a');
-    console.log('adding handler to ', header.get());
     header.on('click', function(evt) {
         that.toggleClass('active');
         this.scrollIntoView();
