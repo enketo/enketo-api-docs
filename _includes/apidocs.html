@@ -13,6 +13,7 @@
         
         {% if doc.params %}
         <h3>Request</h3>
+          <p>The request Content-Type is <span><code>application/x-www-form-urlencoded</code></span>.</p>
           <ul>
           {% for param in doc.params %}
             <li>{% if param.required == nil %}required {% else %}optional {% endif %}
