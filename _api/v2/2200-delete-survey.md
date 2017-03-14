@@ -13,5 +13,4 @@ layout: null
 
 
 ```Status: 204 OK (found and de-activated)```
-```[EMPTY]
-```
+```[EMPTY]```
