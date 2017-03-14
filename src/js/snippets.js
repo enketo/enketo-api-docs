@@ -45,6 +45,7 @@ function SnippetBuilder() {
             'instance': 'instance=<data><node>val</node></data>',
             'return_url': 'return_url=https://enketo.org',
             'instance_id': 'instance_id=someUUID',
+            'instance_attachments': 'instance_attachments[bird.jpg]=https://example.com/bird.jpg',
             'defaults': 'defaults[/data/q1]=a&defaults[/data/q2]=3',
             'parent_window_origin': 'parent_window_origin=https://my.home.page',
             'theme': 'theme=grid'

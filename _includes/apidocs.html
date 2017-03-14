@@ -23,6 +23,7 @@
               {% elsif param.name == 'return_url' %}parameter <strong><code>return_url</code></strong> is the URL to redirect the user to after submission on single submit surveys (default is a generic thank you page)
               {% elsif param.name == 'instance' %}parameter <strong><code>instance</code></strong> is the XML instance with <em>escaped quotation marks</em> to be edited
               {% elsif param.name == 'instance_id' %}parameter <strong><code>instance_id</code></strong> is the instanceID of the existing record to be edited
+              {% elsif param.name == 'instance_attachments' %}parameter <strong><code>instance_attachments[]</code></strong> can be used to pass attachments for the instance to be edited
               {% elsif param.name == 'defaults' %}parameter <strong><code>defaults[]</code></strong> can be used to dynamically override survey field defaults
               {% elsif param.name == 'parent_window_origin' %}parameter <strong><code>parent_window_origin</code></strong> can be used to safely enable an iframed survey to post messages back to the parent window
               {% endif %}

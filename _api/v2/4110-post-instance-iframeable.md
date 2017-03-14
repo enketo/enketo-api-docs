@@ -8,7 +8,10 @@ params:
   - name: form_id
   - name: instance
   - name: instance_id
+  - name: instance_attachments
+    required: false
   - name: return_url
+    required: false
 codes: [201, 400, 401, 403, 404, 405, 410]
 layout: null
 ---
