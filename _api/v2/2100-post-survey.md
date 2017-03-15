@@ -8,9 +8,7 @@ params:
   - name: theme
     required: false
   - name: defaults
-    required: false 
-  - name: defaults
-    required: false
+    required: false  
 codes: [200, 400, 401, 403, 404, 405, 410]
 layout: null
 changes:
