@@ -47,6 +47,7 @@ function SnippetBuilder() {
             'instance_id': 'instance_id=someUUID',
             'instance_attachments': 'instance_attachments[bird.jpg]=https://example.com/bird.jpg',
             'defaults': 'defaults[/data/q1]=a&defaults[/data/q2]=3',
+            'instance_attachments': 'instance_attachments[image.jpg]=https://example.com/image.jpg',
             'parent_window_origin': 'parent_window_origin=https://my.home.page',
             'theme': 'theme=grid'
         };
