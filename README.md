@@ -4,7 +4,7 @@ This is a fork of the marvellous [carte](https://github.com/devo-ps/carte) repos
 
 ## Install
 
-Install browserify with `sudo npm install -g browserify`
+Install browserify with `sudo npm install -g browserify` and do `bundle install` to install jekyll dependencies.
 
 ## Build
 

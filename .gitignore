@@ -8,5 +8,4 @@ _site/
 
 *.sublime-project
 *.sublime-workspace
-Gemfile.lock
 _data/navigation.json
