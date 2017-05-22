@@ -9,10 +9,12 @@ params:
     required: false
   - name: defaults
     required: false
+  - name: go_to
+    required: false
 codes: [200, 400, 401, 403, 404, 405, 410]
 layout: null
 changes:
-  - In API v2 the theme and defaults parameters were added.
+  - In API v2 the theme, go_to, and defaults parameters were added.
 ---
 
 ### Response

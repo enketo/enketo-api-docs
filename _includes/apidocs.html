@@ -26,6 +26,7 @@
               {% elsif param.name == 'instance_attachments' %}parameter <strong><code>instance_attachments[]</code></strong> can be used to pass attachments for the instance to be edited (<code>instance_attachments[file.name]=https://example.com</code>)
               {% elsif param.name == 'defaults' %}parameter <strong><code>defaults[]</code></strong> can be used to dynamically override survey field defaults (<code>defaults[/path/to/node]=value</code>)
               {% elsif param.name == 'parent_window_origin' %}parameter <strong><code>parent_window_origin</code></strong> can be used to safely enable an iframed survey to post messages back to the parent window
+              {% elsif param.name == 'go_to' %}parameter <strong><code>go_to</code></strong> can be used to jump to a specific question upon load. It takes any XPath (<code>go_to=//question</code> or <code>go_to=//complex/repeat[3]//question</code>).
               {% endif %}
             </li>
           {% endfor %}

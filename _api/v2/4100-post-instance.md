@@ -12,8 +12,12 @@ params:
     required: false
   - name: return_url
     required: false
+  - name: go_to
+    required: false
 codes: [201, 400, 401, 403, 404, 405, 410]
 layout: null
+changes: 
+  - In API v2 the instance_attachments, and go_to parameters were added.
 ---
 
 ### Response
