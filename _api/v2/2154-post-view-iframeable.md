@@ -6,7 +6,11 @@ type: POST
 params: 
   - name: server_url 
   - name: form_id
+  - name: return_url
+    required: false
   - name: go_to
+    required: false
+  - name: parent_window_origin
     required: false
 codes: [200, 201, 400, 401, 403, 404, 405, 410]
 layout: null

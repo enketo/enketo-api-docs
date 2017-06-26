@@ -6,6 +6,8 @@ type: GET
 params: 
   - name: server_url 
   - name: form_id
+  - name: return_url
+    required: false
   - name: go_to
     required: false
 codes: [200, 400, 401, 403, 404, 405, 410]
