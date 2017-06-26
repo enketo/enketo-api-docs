@@ -12,6 +12,8 @@ params:
     required: false
   - name: defaults
     required: false
+  - name: parent_window_origin
+    required: false
 codes: [200, 201, 400, 401, 403, 404, 405, 410]
 layout: null
 changes:
