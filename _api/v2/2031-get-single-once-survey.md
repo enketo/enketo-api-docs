@@ -6,8 +6,6 @@ type: GET
 params: 
   - name: server_url 
   - name: form_id
-  - name: theme
-    required: false
   - name: return_url
     required: false
   - name: defaults

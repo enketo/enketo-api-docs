@@ -1,6 +1,6 @@
 ---
 categories: [v2, instance]
-title: Post an instance for editing
+title: Load an instance for editing
 description: This webform view edits an existing already-submitted finalized record.
 type: POST
 params: 

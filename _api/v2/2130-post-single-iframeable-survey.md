@@ -14,7 +14,7 @@ params:
     required: false
   - name: parent_window_origin
     required: false
-codes: [200, 400, 401, 403, 404, 405, 410]
+codes: [200, 201, 400, 401, 403, 404, 405, 410]
 layout: null
 changes: 
   - In API v2 the theme, defaults, and parent_window_origin parameters were added.

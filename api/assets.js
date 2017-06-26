@@ -10003,7 +10003,8 @@ function SnippetBuilder() {
             'defaults': 'defaults[/data/q1]=a&defaults[/data/q2]=3',
             'instance_attachments': 'instance_attachments[image.jpg]=https://example.com/image.jpg',
             'parent_window_origin': 'parent_window_origin=https://my.home.page',
-            'theme': 'theme=grid'
+            'theme': false,
+            'go_to': false
         };
         var apiToken = $('input[name="apiToken"]').val();
 
@@ -10018,7 +10019,7 @@ function SnippetBuilder() {
             paramNames = $(this).attr('data-params').split(' ');
             for (var i = 0; i < paramNames.length; i++) {
                 dataStr += (i === 0) ? '?' : '&';
-                dataStr += paramVals[paramNames[i]];
+                dataStr = paramVals[paramNames[i]] ? dataStr + paramVals[paramNames[i]] : dataStr;
             }
             link = $(this).closest('article').attr('data-path') + dataStr;
             $(this).attr('href', paramVals.enketo_url + apiPath + link);

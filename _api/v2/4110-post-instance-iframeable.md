@@ -1,6 +1,6 @@
 ---
 categories: [v2, instance, iframe]
-title: Post an instance for editing (iframeable response)
+title: Load an instance for editing in an iframe
 description: This webform view edits an existing already-submitted finalized record.
 type: POST
 params: 

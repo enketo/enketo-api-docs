@@ -9,7 +9,7 @@ params:
     required: false
   - name: defaults
     required: false  
-codes: [200, 400, 401, 403, 404, 405, 410]
+codes: [200, 201, 400, 401, 403, 404, 405, 410]
 layout: null
 changes:
   - In API v2 this always returns an online-only survey.
