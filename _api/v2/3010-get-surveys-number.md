@@ -12,7 +12,7 @@ layout: null
 
 Sends back an object including the number property.
 
-```Status: 200 OK (existing)```
+```Status: 200 OK```
 ```{
     "number": 12,
     "code": 200

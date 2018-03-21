@@ -22,4 +22,4 @@ changes:
 
 Sends back a PDF file or a JSON error response.
 
-```Status: 201 OK (existing)    Status: 201 OK (new)```
+```Status: 200 OK (if it already existed)```

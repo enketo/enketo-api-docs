@@ -24,7 +24,7 @@ changes:
 
 Sends back an object including a view_url property.
 
-```Status:201 OK```
+```Status: 201 OK```
 ```{
     "view_url":  "https://enke.to/view/::abcd232agdf3434sgdra34?instance_id=abcd",
     "code": 201
