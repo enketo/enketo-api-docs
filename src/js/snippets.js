@@ -28,7 +28,7 @@ function SnippetBuilder() {
     $refs.apiToken = $('.api_token');
     $refs.enketoUrl = $('.enketo_url');
 
-    $inputs.change(function() {
+    $inputs.change(function () {
         var txt;
         var link;
         var paramNames;
@@ -49,18 +49,21 @@ function SnippetBuilder() {
             'defaults': 'defaults[/data/q1]=a&defaults[/data/q2]=3',
             'instance_attachments': 'instance_attachments[image.jpg]=https://example.com/image.jpg',
             'parent_window_origin': 'parent_window_origin=https://my.home.page',
+            'format': 'format=A4',
+            'margin': 'margin=2.5cm',
+            'landscape': 'landscape=false',
             'theme': false,
             'go_to': false
         };
         var apiToken = $('input[name="apiToken"]').val();
 
         //update references in text
-        $refs[name].each(function() {
+        $refs[name].each(function () {
             $(this).text(value);
         });
 
         //update references in sample GET links
-        $linkTries.each(function() {
+        $linkTries.each(function () {
             dataStr = '';
             paramNames = $(this).attr('data-params').split(' ');
             for (var i = 0; i < paramNames.length; i++) {
@@ -73,7 +76,7 @@ function SnippetBuilder() {
         });
 
         //update references in cURL snippets
-        $curlTries.each(function() {
+        $curlTries.each(function () {
             dataStr = '';
             $article = $(this).closest('article');
             path = $article.attr('data-path');

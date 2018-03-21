@@ -27,6 +27,9 @@
               {% elsif param.name == 'defaults' %}parameter <strong><code>defaults[]</code></strong> can be used to dynamically override survey field defaults (<code>defaults[/path/to/node]=value</code>)
               {% elsif param.name == 'parent_window_origin' %}parameter <strong><code>parent_window_origin</code></strong> can be used to safely enable an iframed survey to post messages back to the parent window
               {% elsif param.name == 'go_to' %}parameter <strong><code>go_to</code></strong> can be used to jump to a specific question upon load. It takes any XPath (<code>go_to=//question</code> or <code>go_to=//complex/repeat[3]//question</code>).
+              {% elsif param.name == 'format' %}parameter <strong><code>format</code></strong> the paper format. Valid values are: <code>Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, and A6</code>. Default is <code>Letter</code>.
+              {% elsif param.name == 'margin' %}parameter <strong><code>margin</code></strong> the paper margin. Valid units are: <code>in, cm, and mm</code>. Example values are <code>2.1in, 2cm, 10mm</code>. Default is <code>0.5in</code>.
+              {% elsif param.name == 'landscape' %}parameter <strong><code>landscape</code></strong> whether paper orientation is landscape. Valid values ar <code>true, false</code>. Default is <code>false</code>.
               {% endif %}
             </li>
           {% endfor %}
@@ -44,7 +47,7 @@
             {% when 200 %}Record existed, request succeeded.
             {% when 201 %}Record was created, request succeeded.
             {% when 204 %}Request succeeded, empty response.
-            {% when 400 %}Malformed request, maybe parameters are missing.
+            {% when 400 %}Malformed request, maybe a required parameter is missing or a parameter has an invalid value.
             {% when 401 %}Authentication failed, incorrect or expired API token used or none at all.
             {% when 403 %}Authentication succeeded, but account is not active or quota is filled up.
             {% when 404 %}Resource was not found in database.
