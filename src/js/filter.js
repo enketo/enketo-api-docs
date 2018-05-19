@@ -7,7 +7,7 @@ var $ = require('jquery');
 module.exports = Filter;
 
 // Case-insensitive contains()
-$.expr[':'].Contains = function(a, i, m) {
+$.expr[':'].Contains = function (a, i, m) {
     return (a.textContent || a.innerText || '').toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
 };
 
@@ -23,33 +23,35 @@ function Filter(list) {
     });
     var input = $('<input>').attr({
         'type': 'text',
-        'placeholder': 'Filter by keyword'
+        'name': 'filter',
+        'placeholder': 'Filter by keyword',
+        'aria-label': 'Filter by keyword'
     });
-    $(form).append(input).prependTo(this.el);
+    $(form).append(input).insertBefore(this.el);
 
     // Filter function
     var self = this;
-    $(input).change(function() {
-            var filter = $(this).val();
-            if (filter) {
-                $(self.el).find('a:not(:Contains(' + filter + '))').parent().hide();
-                $(self.el).find('a:Contains(' + filter + ')').parent().show();
+    $(input).change(function () {
+        var filter = $(this).val();
+        if (filter) {
+            $(self.el).find('a:not(:Contains(' + filter + '))').parent().hide();
+            $(self.el).find('a:Contains(' + filter + ')').parent().show();
+        } else {
+            $(self.el).find('li').show();
+        }
+
+        // Hide titles when group is empty
+        $(self.el).find('ul').each(function () {
+            if (!$(this).find('li:visible').length) {
+                $(this).prev('h2').hide();
             } else {
-                $(self.el).find('li').show();
+                $(this).prev('h2').show();
             }
+        });
 
-            // Hide titles when group is empty
-            $(self.el).find('ul').each(function() {
-                if (!$(this).find('li:visible').length) {
-                    $(this).prev('h2').hide();
-                } else {
-                    $(this).prev('h2').show();
-                }
-            });
-
-            return false;
-        })
-        .keyup(function() {
+        return false;
+    })
+        .keyup(function () {
             $(this).change();
         });
 
