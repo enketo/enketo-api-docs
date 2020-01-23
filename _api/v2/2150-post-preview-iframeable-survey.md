@@ -15,6 +15,7 @@ codes: [200, 201, 400, 401, 403, 404, 405, 410]
 layout: null
 changes:
   - In API v2 the theme, go_to, and defaults parameters were added.
+  - In API v2 the return property was changed to `preview_iframe_url`.
 ---
 
 ### Response
