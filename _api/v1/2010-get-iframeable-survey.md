@@ -16,6 +16,6 @@ Sends back an object including the url property.
 
 ```Status: 200 OK (if it already existed)```
 ```{
-    "url":  "https://enke.to/i/::abcd",
+    "url":  "https://enke.to/i/abcd",
     "code": 200
 }```

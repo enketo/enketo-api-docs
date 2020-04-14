@@ -24,6 +24,6 @@ Sends back an object including a single_url property.
 
 ```Status: 200 OK (existing)    Status: 201 OK (new)```
 ```{
-    "single_url": "https://enke.to/single/::abcd",
+    "single_url": "https://enke.to/single/abcd",
     "code": 200
 }```

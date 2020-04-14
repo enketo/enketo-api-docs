@@ -17,6 +17,6 @@ Sends back an object including an single_url property.
 
 ```Status: 200 OK (if it already existed)```
 ```{
-    "single_url": "https://enke.to/single/i/::abcd",
+    "single_url": "https://enke.to/single/i/abcd",
     "code": 200
 }```

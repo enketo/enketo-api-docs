@@ -16,7 +16,7 @@ When [retrieving stuff](#/get-survey) for example:
 
 ```Status: 200 OK```
 ```{
-    "url": "https://enke.to/::abcd",
+    "url": "https://enke.to/abcd",
     "code": 200
 }```
 

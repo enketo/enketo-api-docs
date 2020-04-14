@@ -26,6 +26,6 @@ Sends back an object including an single_iframe_url property.
 
 ```Status: 200 OK (existing)    Status: 201 OK (new)```
 ```{
-    "single_iframe_url": "https://enke.to/single/i/::aberj32wrkjdgkajahg",
+    "single_iframe_url": "https://enke.to/single/i/aberj32wrkjdgkajahg",
     "code": 200
 }```

@@ -21,6 +21,6 @@ Sends back an object including a preview_url property which contains the enketo 
 
 ```Status: 200 OK (if it already existed)```
 ```{
-    "preview_url": "https://enke.to/preview/::abcd",
+    "preview_url": "https://enke.to/preview/abcd",
     "code": 200
 }```

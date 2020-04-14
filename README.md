@@ -1,4 +1,4 @@
-See live at [apidocs.enketo.org](http://apidocs.enketo.org)
+See live at [apidocs.enketo.org](https://apidocs.enketo.org)
 
 This is a fork of the marvellous [carte](https://github.com/devo-ps/carte) repository.
 

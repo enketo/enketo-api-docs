@@ -22,6 +22,6 @@ Sends back an object including an single_once_url property.
 
 ```Status: 200 OK (if it already existed)```
 ```{
-    "single_once_url": "https://enke.to/single/::werdgag3e423gsgadgsd",
+    "single_once_url": "https://enke.to/single/werdgag3e423gsgadgsd",
     "code": 200
 }```

@@ -18,6 +18,6 @@ Sends back an object including a url property if it exists (i.e. if it has been 
 
 ```Status: 200 OK```
 ```{
-    "offline_url": "https://enke.to/::abcd",
+    "offline_url": "https://enke.to/abcd",
     "code": 200
 }```

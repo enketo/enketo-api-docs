@@ -26,6 +26,6 @@ Sends back an object including a edit_url property. You should redirect the user
 
 ```Status: 201 OK```
 ```{
-    "edit_url": "https://enke.to/edit/::abcd?instance_id=324sfasgsa324",
+    "edit_url": "https://enke.to/edit/abcd?instance_id=324sfasgsa324",
     "code": 201
 }```

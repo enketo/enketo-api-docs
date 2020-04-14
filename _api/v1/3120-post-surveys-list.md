@@ -18,12 +18,12 @@ Sends back an object with launched forms.
         {
             "server_url": "https://myserver.com/bob",
             "form_id": "widgets",
-            "url": "https://enke.to/::abcd"
+            "url": "https://enke.to/abcd"
         },
         {
             "server_url": "https://myserver.com/bob",
             "form_id": "Birds",
-            "url": "https://enke.to/::efgh"
+            "url": "https://enke.to/efgh"
         }
     ],
     "code": 200

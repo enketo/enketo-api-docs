@@ -22,6 +22,6 @@ Sends back an object including a view_url property.
 
 ```Status: 200 OK (existing)    Status: 201 OK (new)```
 ```{
-    "view_url":  "https://enke.to/view/::abcd232agdf3434sgdra34",
+    "view_url":  "https://enke.to/view/abcd232agdf3434sgdra34",
     "code": 200
 }```
