@@ -86,7 +86,7 @@ function SnippetBuilder() {
                 dataStr += paramVals[paramNames[i]];
             }
 
-            curl = ($article.hasClass('POST')) ? 'curl --user ' + apiToken + ': -g -d "' + dataStr + '" ' + paramVals.enketo_url + apiPath + path : ($article.hasClass('DELETE')) ? 'curl -X DELETE --user ' + apiToken + ': -g -d "' + dataStr + '" ' + paramVals.enketo_url + apiPath + path : 'curl --user ' + apiToken + ': -g"' + paramVals.enketo_url + apiPath + path + '?' + dataStr + '"';
+            curl = ($article.hasClass('POST')) ? 'curl --user ' + apiToken + ': -g -d "' + dataStr + '" ' + paramVals.enketo_url + apiPath + path : ($article.hasClass('DELETE')) ? 'curl -X DELETE --user ' + apiToken + ': -g -d "' + dataStr + '" ' + paramVals.enketo_url + apiPath + path : 'curl --user ' + apiToken + ': -g "' + paramVals.enketo_url + apiPath + path + '?' + dataStr + '"';
             $(this).text(curl);
         });
 
