@@ -12,18 +12,27 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/enketo/enketo-api-docs.git"
-  },
   "keywords": [
     "Enketo",
     "API"
   ],
-  "author": "Martijn van de Rijdt <martijn@enketo.org> (https://enketo.org)",
+  "repository": "https://github.com/enketo/enketo-api-docs",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/enketo/enketo-api-docs/issues"
+  "author": {
+    "name": "KoboToolbox",
+    "email": "enketo@kobotoolbox.org",
+    "url": "https://www.kobotoolbox.org/about-us/meet-the-team"
   },
-  "homepage": "https://github.com/enketo/enketo-api-docs#readme"
+  "contributors": [
+    {
+      "name": "ODK",
+      "email": "support@getodk.org",
+      "url": "https://getodk.org/about/team"
+    },
+    {
+      "name": "Martijn van de Rijdt",
+      "email": "martijn@enketo.org",
+      "url": "https://github.com/MartijnR"
+    }
+  ]
 }
