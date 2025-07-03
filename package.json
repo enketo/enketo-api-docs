@@ -17,7 +17,7 @@
     "API"
   ],
   "repository": "https://github.com/enketo/enketo-api-docs",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "author": {
     "name": "KoboToolbox",
     "email": "enketo@kobotoolbox.org",
